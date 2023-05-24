@@ -26,5 +26,7 @@ public class Main {
         list.add(question8);
         list.add(question9);
         list.add(question10);
+
+        Question.setList(list);
     }
 }
