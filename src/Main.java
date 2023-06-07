@@ -66,7 +66,41 @@ public class Main {
 
         list0.add(questiona1);
         list0.add(questiona2);
+        list0.add(questiona3);
+        list0.add(questiona4);
+        list0.add(questiona5);
+        list0.add(questiona6);
+        list0.add(questiona7);
+        list0.add(questiona8);
+        list0.add(questiona9);
+        list0.add(questiona10);
 
         Question.addList(list0);
+
+        ArrayList<Question> list1 = new ArrayList<Question>();
+
+        Question questionb1 = new Question("A law passed as part of the Compromise of 1850, which provided southern slaveholders with legal weapons to capture slaves who had escaped to the free states. The law was highly unpopular in the North and helped to convert many previously indifferent northerners to antislavery.", "fugitive slave act");
+        Question questionb2 = new Question("Former US senator who in 1861, was chosen president of the Confederate States of America; had wide military and administrative experience", "jefferson davis");
+        Question questionb3 = new Question("Lincoln's statement affirming the abolition of slavery as a war aim (1862) following the battle of Antietam. 4 million slaves were automatically freed.", "emancipation proclamation");
+        Question questionb4 = new Question("The plan to rebuild the South after the Civil War and extend the ideas of liberty and equality to the slaves that had been freed during the war. There are three brands: Presidential (Lincoln and Johnson), Radical (Radical Republicans), and Johnsonian (Johnson).", "reconstruction");
+        Question questionb5 = new Question("Northerner who moved to the South after the American Civil War, especially during Reconstruction, in order to profit from the instability and power vacuum that existed at this time.", "carpetbagger");
+        Question questionb6 = new Question("An organization of workers formed for the purpose of advancing its members' interests in respect to wages, benefits, and working conditions.", "labor union");
+        Question questionb7 = new Question("The process of people moving to cities.", "urbanization");
+        Question questionb8 = new Question("A social movement against the consumption of alcoholic beverages.", "temperance movement");
+        Question questionb9 = new Question("He was a writer of novels of social protest and political tracts; he is best known for his 1906 expose of the meatpacking industry, \"The Jungle.\"", "upton sinclair");
+        Question questionb10 = new Question("Was the movement of 6 million African Americans out of the rural Southern United States to the urban Northeast, Midwest, and West that occurred between 1910 and 1970.", "great migration");
+
+        list1.add(questionb1);
+        list1.add(questionb2);
+        list1.add(questionb3);
+        list1.add(questionb4);
+        list1.add(questionb5);
+        list1.add(questionb6);
+        list1.add(questionb7);
+        list1.add(questionb8);
+        list1.add(questionb9);
+        list1.add(questionb10);
+
+        Question.addList(list1);
     }
 }

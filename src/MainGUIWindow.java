@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.*;
-import java.util.ArrayList;
 
 
 public class MainGUIWindow extends JFrame implements ActionListener{
@@ -17,6 +16,7 @@ public class MainGUIWindow extends JFrame implements ActionListener{
     private JTextArea question;
     private JTextField answerFieldTextField;
     private JButton checkButton;
+    private JButton backButton;
 
     private static boolean correct = false;
 
@@ -75,6 +75,7 @@ public class MainGUIWindow extends JFrame implements ActionListener{
        csaButton.addActionListener(this);
        preCalcButton.addActionListener(this);
        usHistoryButton.addActionListener(this);
+       backButton.addActionListener(this);
 
        setVisible(true);
 
@@ -110,10 +111,19 @@ public class MainGUIWindow extends JFrame implements ActionListener{
             if (button.getText().equals("Click to begin")){
                 startQuiz();
             }else if (button.getText().equals("Check")){
-                if(current.checkAnswer(answerFieldTextField.getText())){
+                if(current.checkAnswer(answerFieldTextField.getText().toLowerCase())){
                     changeQuestion();
                 }
-            }else if(button.getText().equals("Computer Science A")){
+            }else if(button.getText().equals("Back to menu")){
+                checkButton.setVisible(false);
+                question.setVisible(false);
+                answerFieldTextField.setVisible(false);
+                button1.setVisible(true);
+                setContentPane(menuPanel);
+                count = 0;
+                current = Question.getList().get(num).get(count);
+            }
+            else if(button.getText().equals("Computer Science A")){
                 num = 0;
                 setQuiz();
             }else if(button.getText().equals("Pre Calculus")){
