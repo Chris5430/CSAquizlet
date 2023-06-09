@@ -76,6 +76,8 @@ public class MainGUIWindow extends JFrame implements ActionListener{
        preCalcButton.addActionListener(this);
        usHistoryButton.addActionListener(this);
        backButton.addActionListener(this);
+        button1.addActionListener(this);
+        checkButton.addActionListener(this);
 
        setVisible(true);
 
@@ -95,8 +97,7 @@ public class MainGUIWindow extends JFrame implements ActionListener{
             title.setText("Welcome to the US History quiz");
         }
 
-        button1.addActionListener(this);
-        checkButton.addActionListener(this);
+
         question.setVisible(false);
         answerFieldTextField.setVisible(false);
         checkButton.setVisible(false);
@@ -110,6 +111,7 @@ public class MainGUIWindow extends JFrame implements ActionListener{
             JButton button = (JButton) source;
             if (button.getText().equals("Click to begin")){
                 startQuiz();
+               // System.out.println("s");
             }else if (button.getText().equals("Check")){
                 if(current.checkAnswer(answerFieldTextField.getText().toLowerCase())){
                     changeQuestion();
@@ -121,6 +123,7 @@ public class MainGUIWindow extends JFrame implements ActionListener{
                 button1.setVisible(true);
                 setContentPane(menuPanel);
                 count = 0;
+                System.out.println(count);
                 current = Question.getList().get(num).get(count);
             }
             else if(button.getText().equals("Computer Science A")){
@@ -142,6 +145,7 @@ public class MainGUIWindow extends JFrame implements ActionListener{
             question.setText(current.getQuestion());
             answerFieldTextField.setText("");
             count++;
+            System.out.println(count);
         }else {
             answerFieldTextField.setVisible(false);
             checkButton.setVisible(false);
